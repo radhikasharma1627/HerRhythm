@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HerRhythm</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-bg">
+  <div id="loginPage" class="fade-in">
+    <div class="login-box">
+      <h1>🌸 Welcome</h1>
+      <label for="userName">Your Name:</label>
+      <input type="text" id="userName" placeholder="Enter your name">
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob">
+
+      <button onclick="enterApp()">Continue</button>
+    </div>
+  </div>
+
+  <div id="app" class="fade-in" style="display:none;">
+    <h1 id="greeting">🌸 HerRhythm</h1>
+    <h5><i>Empowering and Highlights of <b>YOUR</b> Natural Rhythm</i></h5>
+    <div class="tracker">
+      <label for="lastDate">Last Period Start Date:</label>
+      <input type="date" id="lastDate">
+
+      <label for="cycleLength">Average Cycle Length (days):</label>
+      <input type="number" id="cycleLength" value="28">
+
+      <label for="periodLength">Period Duration (days):</label>
+      <input type="number" id="periodLength" value="5">
+
+      <button onclick="goToPrediction()">Track</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

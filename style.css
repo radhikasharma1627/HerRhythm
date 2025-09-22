@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  scroll-behavior: smooth;
+  color: #5a1846;
+}
+
+.login-bg {
+  background: url('Pink Aesthetic Background.jpeg') no-repeat center/cover;
+  height: 100vh;
+}
+
+.app-bg {
+  background: url('background.jpeg') no-repeat center/cover;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Fade animation */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Boxes */
+.login-box, .tracker, .prediction-box, .notes-container {
+  background: rgba(255, 240, 246, 0.95);
+  padding: 20px;
+  border-radius: 12px;
+  width: 350px;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+/* Inputs & Buttons */
+input, textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #e75480;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: #c2185b;
+}
+
+/* Calendar */
+.calendar-container {
+  background: rgba(255, 240, 246, 0.95);
+  border-radius: 12px;
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+}
+.calendar-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-top: 15px;
+}
+#calendar div {
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  transition: 0.3s;
+}
+#calendar .period { background: #f8bbd0; }
+#calendar .fertile { background: #ffe082; }
+#calendar .ovulation { background: #b39ddb; }
+#calendar div:hover { transform: scale(1.1); }
+
+/* Notes */
+.notes-container textarea {
+  height: 80px;
+}
+.saved-note {
+  background: #fce4ec;
+  padding: 8px;
+  margin: 8px 0;
+  border-radius: 8px;
+  position: relative;
+}
+.delete-note {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  background: #ff1744;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+/* Care Guide */
+#careGuideBtn, #logoutBtn, #homeBtn {
+  position: fixed;
+  top: 15px;
+  padding: 10px 15px;
+}
+#careGuideBtn { right: 15px; background: #f48fb1; }
+#logoutBtn { right: 120px; background: #ff6f61; }
+
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.popup h2 { color: #d63384; }

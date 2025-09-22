@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cycle Prediction</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-bg">
+  <button id="careGuideBtn" onclick="toggleCareGuide()">Care Guide</button>
+  <button id="logoutBtn" onclick="logout()">Logout</button>
+
+  <h1 id="predictionTitle">🌸 Your Cycle Prediction</h1>
+  <div class="prediction-box fade-in">
+    <div id="predictionResults"></div>
+  </div>
+
+  <div class="calendar-container">
+    <div class="calendar-controls">
+      <button onclick="prevMonth()">◀</button>
+      <h2 id="monthYear"></h2>
+      <button onclick="nextMonth()">▶</button>
+    </div>
+    <div id="calendar"></div>
+  </div>
+
+  <div class="notes-container">
+    <h2>📝 Notes</h2>
+    <input type="date" id="noteDate">
+    <textarea id="noteText" placeholder="Write your note..."></textarea>
+    <button onclick="addNote()">Save Note</button>
+    <div id="savedNotes"></div>
+  </div>
+
+  <!-- Care Guide -->
+  <div id="careGuide" class="popup">
+    <h2>🌸 Care Guide</h2>
+    <h3>Hygiene Tips</h3>
+    <ul>
+      <li>Change pads/tampons every 4-6 hours.</li>
+      <li>Use warm water for cleaning.</li>
+      <li>Avoid harsh soaps for intimate hygiene.</li>
+      <li>Wear cotton undergarments.</li>
+    </ul>
+
+    <h3>Cramp Relief Exercises</h3>
+    <ul>
+      <li>Child’s Pose & Cat-Cow stretch.</li>
+      <li>Pelvic tilts and gentle yoga.</li>
+      <li>Short walks daily.</li>
+      <li>Heating pad for relaxation.</li>
+    </ul>
+
+    <h3>Food Suggestions</h3>
+    <ul>
+      <li>Dark chocolate for mood.</li>
+      <li>Bananas, nuts, and yogurt.</li>
+      <li>Green leafy veggies for iron.</li>
+      <li>Herbal teas for calmness.</li>
+      <li>Omega-3 rich foods (salmon, flaxseeds).</li>
+    </ul>
+    <button onclick="toggleCareGuide()">Close</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
